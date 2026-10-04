@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Social Media Posting with AES-192</title>
+
+    <link rel="stylesheet" href="postit.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Social Media App</h1>
+      <p class="subtitle">AES-192 Secure Posting</p>
+
+      <section id="user-section">
+        <h2>User Information</h2>
+        <input type="text" id="fullname" placeholder="Full Name" />
+        <input type="date" id="birthday" />
+
+        <select id="yearlevel">
+          <option value="">Select Year Level</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+
+        <select id="gender">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="saveUser()">Continue</button>
+
+        <p id="user-message"></p>
+      </section>
+
+      <section id="post-section" class="hidden">
+        <h2>Welcome, <span id="display-name"></span>!</h2>
+
+        <textarea id="post-text" placeholder="What's on your mind?"></textarea>
+
+        <button onclick="submitPost()">Post</button>
+
+        <button class="logout" onclick="logout()">Reset User</button>
+
+        <p id="post-message"></p>
+
+        <div id="post-thread"></div>
+      </section>
+    </div>
+
+    <script src="postit.js"></script>
+  </body>
+</html>
